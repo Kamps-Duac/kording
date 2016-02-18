@@ -1,6 +1,14 @@
 # kording
 Use simple controls to display a musical scale.
 
+# getting started
+ - fork the repo
+ - run `npm install`
+ - run `bower install`
+ - resolve any error/dependency issues
+ - `grunt serve` to preview the app
+ - refer to the `yo angular` [documentation](https://github.com/yeoman/generator-angular) for more info!
+
 # tasks
 
 Here we will list tasks to be completed. Tasks can be edited and added at will, and claimed by anyone to be achieved.
