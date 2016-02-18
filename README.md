@@ -16,4 +16,4 @@ Any usability issues, feature requests, or bugs should be handled as issues.
 - [ ] __Couple of Images__ - download a couple of major scale images as mocks and show them on the page
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
-- [ ] __Use VexFlow to render scales depending on what URL was hit 
+- [ ] __Use VexFlow__ -  to render scales depending on what URL was hit 
