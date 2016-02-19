@@ -18,10 +18,9 @@ framework, or utility.
 
 Any usability issues, feature requests, or bugs should be handled as issues.
 
-- [ ] __Determine Framework__ _Scott_ - What is best - angular, backbone, ember?
-- [ ] __Scaffold__ - create the Yeoman Scaffold
-- [ ] __Bootstrap__ - use a bootstrap template to set up the initial page
-- [ ] __Couple of Images__ - download a couple of major scale images as mocks and show them on the page
+- [X] __Determine Framework__ _Scott_ - Going with Angular
+- [X] __Scaffold__ - create the Yeoman Scaffold using yeoman-angular with grunt, Saas, and bootstrap
+- [X] __Couple of Images__ - download a couple of major scale images as mocks and show them on the page
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 - [ ] __Use VexFlow__ -  to render scales depending on what URL was hit 
