@@ -29,6 +29,12 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/scale', {
+        templateUrl: 'views/scale.html',
+        controller: 'ScaleCtrl',
+        controllerAs: 'scale'
+      })
+    
       .otherwise({
         redirectTo: '/'
       });

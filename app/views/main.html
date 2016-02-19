@@ -1,11 +1,8 @@
 <div class="jumbotron">
     <h1>Wanna Kord?</h1>
     <p class="lead">
-        <img class="logo" src="images/kording-logo.png" alt="kording">
+        <img class="img-responsive logo" src="images/kording-logo.png" alt="kording">
         <br> I bet I can find it for you.
     </p>
 </div>
-<a ng-repeat="scale in main.scaleImages" ng-click="main.selected=scale" class="btn btn-lg btn-default" ng-href="#/">{{scale.name}}</a>
-<h3>{{main.selected.name}}</h3>
-<img ng-src="{{main.selected.src}}" ng-alt="{{main.selected.name}}">
-<!-- <img ng-src="{{scaleImages}}"> -->
+<div ng-controller="ScaleCtrl as scale" ng-include="'views/scale.html'"></div>
