@@ -16,11 +16,11 @@ angular.module('kordingApp')
         ];
 
         this.scales = [{
-            'src': '/images/CMajor.png',
+            'src': 'images/CMajor.png',
             'tonic': 'C',
             'mode': 'Major'
         }, {
-            'src': '/images/d-major.png',
+            'src': 'images/d-major.png',
             'tonic': 'D',
             'mode': 'Major'
         }];
