@@ -8,7 +8,7 @@
  * Controller of the kordingApp
  */
 angular.module('kordingApp')
-    .controller('ScaleCtrl', function() {
+    .controller('ScaleCtrl', ['vexScale', function(vexScale) {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
@@ -24,4 +24,10 @@ angular.module('kordingApp')
             'tonic': 'D',
             'mode': 'Major'
         }];
-    });
+        angular.element(document).ready(function() {
+            this.canvas = angular.element('canvas')[0];
+            vexScale(this.canvas);
+        });
+
+
+    }]);
