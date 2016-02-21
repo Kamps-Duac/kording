@@ -23,7 +23,8 @@ Any usability issues, feature requests, or bugs should be handled as issues.
 - [X] __Couple of Images__ - download a couple of major scale images as mocks and show them on the page
 - [ ] __Use VexFlow__ -  to render scales.
   - [ ] Create service that provides the scale URL
-  - [ ] Create a directive that places the 'current scale' into a DOM element
+  - [X] Create a directive that places the 'current scale' into a DOM element
+  - [ ] Write the logic to handle a root note and mode, chooses the notes, then pases to vexflow.
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 

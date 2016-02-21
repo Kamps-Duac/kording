@@ -24,10 +24,12 @@ angular.module('kordingApp')
             'tonic': 'D',
             'mode': 'Major'
         }];
-        angular.element(document).ready(function() {
-            this.canvas = angular.element('canvas')[0];
-            vexScale(this.canvas);
-        });
 
+        // this.canvas = angular.element('canvas')[0];
+        // vexScale(this.canvas);
+
+        this.genVexScale = function(element) {
+            vexScale(element);
+        }
 
     }]);
