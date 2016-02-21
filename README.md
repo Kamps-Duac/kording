@@ -25,6 +25,8 @@ Any usability issues, feature requests, or bugs should be handled as issues.
   - [ ] Create service that provides the scale URL
   - [X] Create a directive that places the 'current scale' into a DOM element
   - [ ] Write the logic to handle a root note and mode, chooses the notes, then pases to vexflow.
+  - [ ] How can we handle major/minor key signatures?
+  - [ ] Need the canvas size to change based on scale requirements
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 
