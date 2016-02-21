@@ -3,10 +3,18 @@
         {{scale.selected.tonic }} <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-        <li ng-repeat="s in scale.scales" ng-click="scale.selected=s" ng-init="scale.selected=scale.scales[0]"><a ng-href="">{{s.tonic}}</a></li>
+        <li ng-repeat="tonic in scale.tonics" ng-click="scale.selected.tonic=tonic" ><a ng-href="">{{tonic}}</a></li>
     </ul>
 </div>
-<h3>{{scale.selected.tonic}}</h3>
+<div class="btn-group">
+    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{scale.selected.scaleType }} <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+        <li ng-repeat="scaleType in scale.scaleTypes" ng-click="scale.selected.scaleType=scaleType" ><a ng-href="">{{scaleType}}</a></li>
+    </ul>
+</div>
+<h3>{{scale.selected.tonic}} {{scale.selected.scaleType}}</h3>
 <img class="img-responsive" ng-src="{{scale.selected.src}}" ng-alt="{{scale.selected.tonic}}">
 <!-- <img ng-src="{{scaleImages}}"> -->
 <h3>Lets get our VexFlow on</h3>

@@ -41,5 +41,9 @@
   },
   "scripts": {
     "test": "grunt test"
+  },
+  "dependencies": {
+    "install": "^0.4.4",
+    "teoria": "^2.2.0"
   }
 }

@@ -15,21 +15,20 @@ angular.module('kordingApp')
             'Karma'
         ];
 
-        this.scales = [{
-            'src': 'images/CMajor.png',
-            'tonic': 'C',
-            'mode': 'Major'
-        }, {
-            'src': 'images/d-major.png',
-            'tonic': 'D',
-            'mode': 'Major'
-        }];
+        this.tonics = ['C', 'D', 'Db', 'E', 'F#', 'F', 'G', 'Ab', 'A', 'Bb', 'B'];
+        this.scaleTypes = teoria.Scale.KNOWN_SCALES;
+
+        this.selected = {
+            'tonic': 'c',
+            'scaleType': 'major'
+        }
 
         // this.canvas = angular.element('canvas')[0];
         // vexScale(this.canvas);
 
-        this.genVexScale = function(element) {
-            vexScale(element);
+        this.genVexScale = function(element, tonic, scaleType) {
+            var notes = teoria.scale(tonic, scaleType).simple();
+            vexScale(element, notes);
         }
 
     }]);

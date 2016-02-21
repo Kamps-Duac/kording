@@ -10,41 +10,38 @@
 angular.module('kordingApp')
     .factory('vexScale', function() {
         // Service logic
-
+        var DURATION = 'q';
         // Public API here
-        return function(canvas) {
+        return function(canvas, notes) {
             var renderer = new Vex.Flow.Renderer(canvas,
                 Vex.Flow.Renderer.Backends.CANVAS);
 
             var ctx = renderer.getContext();
+            // Clear the canvas context in case it is being drawn over
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
             var stave = new Vex.Flow.Stave(10, 0, 500);
-            stave.addClef('treble').setContext(ctx).draw();
+            stave.setContext(ctx);
+            stave.addClef('treble');
+            stave.addKeySignature(notes[0].toUpperCase());
+            stave.draw();
 
             // Create the notes
-            var notes = [
-                // A quarter-note C.
-                new Vex.Flow.StaveNote({ keys: ['c/4'], duration: 'q' }),
+            var staveNotes = [];
 
-                // A quarter-note D.
-                new Vex.Flow.StaveNote({ keys: ['d/4'], duration: 'q' }),
-
-                // A quarter-note rest. Note that the key (b/4) specifies the vertical
-                // position of the rest.
-                new Vex.Flow.StaveNote({ keys: ['b/4'], duration: 'qr' }),
-
-                // A C-Major chord.
-                new Vex.Flow.StaveNote({ keys: ['c/4', 'e/4', 'g/4'], duration: 'q' })
-            ];
+            for (var i = 0; i < notes.length; i++) {
+              // TODO: Make the octave suffix smarter
+              staveNotes.push(new Vex.Flow.StaveNote({keys: [notes[i]+'/4'], duration: DURATION }));
+            }
 
             // Create a voice in 4/4
             var voice = new Vex.Flow.Voice({
-                num_beats: 4,
+                num_beats: notes.length,
                 beat_value: 4,
                 resolution: Vex.Flow.RESOLUTION
             });
 
             // Add notes to voice
-            voice.addTickables(notes);
+            voice.addTickables(staveNotes);
 
             // Format and justify the notes to 500 pixels
             new Vex.Flow.Formatter().joinVoices([voice]).format([voice], 500);

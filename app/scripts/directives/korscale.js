@@ -14,7 +14,10 @@ angular.module('kordingApp')
       	var canvas = element[0];
       	canvas.width = 700;
       	canvas.height = 100;
-        scope.scale.genVexScale(canvas);
+      	scope.$watch('scale.selected', function () {
+      		console.log("watched");
+        	scope.scale.genVexScale(canvas, scope.scale.selected.tonic, scope.scale.selected.scaleType);
+      	}, true);
       }
     };
   });
