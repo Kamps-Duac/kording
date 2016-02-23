@@ -7,17 +7,17 @@
  * # korScale
  */
 angular.module('kordingApp')
-  .directive('korScale', function () {
-    return {
-      restrict: 'A',
-      link: function postLink(scope, element) {
-      	var canvas = element[0];
-      	// set an initial size of canvas here, but this should be adjust depending on the number of notes in the scale
-      	canvas.width = 700;
-      	canvas.height = 100;
-      	scope.$watch('scale.selected', function () {
-        	scope.scale.genVexScale(canvas, scope.scale.selected.tonic, scope.scale.selected.scaleType);
-      	}, true);
-      }
-    };
-  });
+    .directive('korScale', function() {
+        return {
+            restrict: 'E',
+            link: function postLink(scope, element) {
+                var canvas = document.createElement('canvas');
+                canvas.height = 100;
+                if (window.innerWidth < 650) { canvas.width = window.innerWidth; } else { canvas.width = 650; }
+                element[0].appendChild(canvas);
+                scope.$watch('scale.selected', function() {
+                    scope.scale.genVexScale(canvas, scope.scale.selected.tonic, scope.scale.selected.scaleType);
+                }, true);
+            }
+        };
+    });

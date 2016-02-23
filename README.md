@@ -29,6 +29,7 @@ Any usability issues, feature requests, or bugs should be handled as issues.
   - [ ] Need the canvas size to change based on scale requirements
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
+- [ ] __Music Theory__ - add info about scale types, finding agreeable modes, circle of fifths, etc
 
 ## Example
 

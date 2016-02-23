@@ -14,8 +14,5 @@
         <li ng-repeat="scaleType in scale.scaleTypes" ng-click="scale.selected.scaleType=scaleType" ><a ng-href="">{{scaleType}}</a></li>
     </ul>
 </div>
-<h3>{{scale.selected.tonic}} {{scale.selected.scaleType}}</h3>
 <img class="img-responsive" ng-src="{{scale.selected.src}}" ng-alt="{{scale.selected.tonic}}">
-<!-- <img ng-src="{{scaleImages}}"> -->
-<h3>Lets get our VexFlow on</h3>
-<canvas kor-scale></canvas>
+<kor-scale class="img-responsive"></kor-scale>

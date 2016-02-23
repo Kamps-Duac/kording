@@ -47,6 +47,9 @@ angular.module('kordingApp')
                     scale.accSpec.num++;
                 }
             }
+            var s = scale.notes[0];
+            var tonicOctave = s.split('/')[0] + '/' + (parseInt(s.substr(-1))+1).toString();
+            scale.notes.push(tonicOctave);
             vexScale(canvas, scale);
         };
 
