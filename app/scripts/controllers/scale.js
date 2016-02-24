@@ -20,7 +20,7 @@ angular.module('kordingApp')
         this.defaultOctave = '4';
 
         this.selected = {
-            'tonic': 'c',
+            'tonic': 'C',
             'scaleType': 'major'
         };
 

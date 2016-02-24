@@ -1,18 +1,15 @@
-<div class="btn-group">
-    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{scale.selected.tonic }} <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li ng-repeat="tonic in scale.tonics" ng-click="scale.selected.tonic=tonic" ><a ng-href="">{{tonic}}</a></li>
-    </ul>
+<div layout="row">
+    <md-input-container style="margin-right: 10px;">
+        <label>Scale Tonic</label>
+        <md-select ng-model="scale.selected.tonic">
+            <md-option ng-repeat="tonic in scale.tonics" value="{{tonic}}">{{tonic}}</md-option>
+        </md-select>
+    </md-input-container>
+    <md-input-container style="margin-right: 10px;">
+        <label>Scale Type</label>
+        <md-select ng-model="scale.selected.scaleType">
+            <md-option ng-repeat="scaleType in scale.scaleTypes" value="{{scaleType}}">{{scaleType}}</md-option>
+        </md-select>
+    </md-input-container>
 </div>
-<div class="btn-group">
-    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{scale.selected.scaleType }} <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-        <li ng-repeat="scaleType in scale.scaleTypes" ng-click="scale.selected.scaleType=scaleType" ><a ng-href="">{{scaleType}}</a></li>
-    </ul>
-</div>
-<img class="img-responsive" ng-src="{{scale.selected.src}}" ng-alt="{{scale.selected.tonic}}">
-<kor-scale class="img-responsive"></kor-scale>
+<kor-scale></kor-scale>
