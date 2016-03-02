@@ -1,15 +1,23 @@
-<div layout="row">
-    <md-input-container style="margin-right: 10px;">
-        <label>Scale Tonic</label>
-        <md-select ng-model="scale.selected.tonic">
-            <md-option ng-repeat="tonic in scale.tonics" value="{{tonic}}">{{tonic}}</md-option>
-        </md-select>
-    </md-input-container>
-    <md-input-container style="margin-right: 10px;">
-        <label>Scale Type</label>
-        <md-select ng-model="scale.selected.scaleType">
-            <md-option ng-repeat="scaleType in scale.scaleTypes" value="{{scaleType}}">{{scaleType}}</md-option>
-        </md-select>
-    </md-input-container>
+<div layout="column">
+    <div layout="row" layout-align="center center">
+        <md-whiteframe class="md-whiteframe-18dp">
+            <md-input-container style="margin-right: 10px;">
+                <!-- <label>Scale Tonic</label> -->
+                <md-select ng-model="scale.selected.tonic">
+                    <md-option ng-repeat="tonic in scale.tonics" value="{{tonic}}">{{tonic}}</md-option>
+                </md-select>
+            </md-input-container>
+            <md-input-container style="margin-right: 10px;">
+                <!-- <label>Scale Type</label> -->
+                <md-select ng-model="scale.selected.scaleType">
+                    <md-option ng-repeat="scaleType in scale.scaleTypes" value="{{scaleType}}">{{scaleType}}</md-option>
+                </md-select>
+            </md-input-container>
+        </md-whiteframe>
+    </div>
+    <div layout="row">
+        <md-whiteframe class="md-whiteframe-12dp" flex>
+            <kor-scale></kor-scale>
+        </md-whiteframe>
+    </div>
 </div>
-<kor-scale></kor-scale>

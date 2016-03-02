@@ -39,5 +39,7 @@ angular
         redirectTo: '/'
       });
 
-      $mdThemingProvider.theme('defualt').dark();
+      $mdThemingProvider.theme('default')
+        .primaryPalette('deep-purple')
+        .accentPalette('deep-orange');
   });

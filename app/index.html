@@ -6,6 +6,7 @@
     <title></title>
     <meta name="description" content="Musical scale generator. Find any scale.">
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -21,15 +22,12 @@
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <!-- Add your site or application content here -->
-    <div class="header">
-    </div>
-    <div class="container">
-        <div ng-view=""></div>
+    <div layout-align="start center">
+        <div ng-view></div>
     </div>
     <div class="footer">
-        <div class="container">
-            <p><span class="glyphicon glyphicon-heart"></span> from the Happy Kampers</p>
+        <div>
+            Kording <i class="material-icons">face</i>
         </div>
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -46,9 +44,7 @@
     </script>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
