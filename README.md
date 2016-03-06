@@ -21,12 +21,13 @@ Any usability issues, feature requests, or bugs should be handled as issues.
 - [X] __Determine Framework__ _Scott_ - Going with Angular
 - [X] __Scaffold__ - create the Yeoman Scaffold using yeoman-angular with grunt, Saas, and bootstrap
 - [X] __Couple of Images__ - download a couple of major scale images as mocks and show them on the page
-- [ ] __Use VexFlow__ -  to render scales.
+- [X] __Use VexFlow__ -  to render scales.
   - [ ] Create service that provides the scale URL
   - [X] Create a directive that places the 'current scale' into a DOM element
-  - [ ] Write the logic to handle a root note and mode, chooses the notes, then pases to vexflow.
-  - [ ] How can we handle major/minor key signatures?
-  - [ ] Need the canvas size to change based on scale requirements
+  - [X] Write the logic to handle a root note and mode, chooses the notes, then pases to vexflow.
+  - [X] How can we handle major/minor key signatures?
+  - [X] Need the canvas size to change based on scale requirements
+- [ ] __Nav Controlller__ to pull out Navagation into Index
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 - [ ] __Music Theory__ - add info about scale types, finding agreeable modes, circle of fifths, etc

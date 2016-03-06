@@ -16,7 +16,11 @@ angular.module('kordingApp')
                 if (window.innerWidth < 650) { canvas.width = window.innerWidth; } else { canvas.width = 650; }
                 element[0].appendChild(canvas);
                 scope.$watch('scale.selected', function() {
-                    scope.scale.genVexScale(canvas, scope.scale.selected.tonic, scope.scale.selected.scaleType);
+                    scope.scale.genVexScale(
+                        canvas, 
+                        scope.scale.selected.tonic, 
+                        scope.scale.selected.accidental, 
+                        scope.scale.selected.scaleType);
                 }, true);
             }
         };
