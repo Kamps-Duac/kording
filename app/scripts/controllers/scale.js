@@ -46,6 +46,13 @@ angular.module('kordingApp')
             return this.selected.accidental === accidental.value;
         }
 
+        this.setScaleType = function(scaleType) {
+            this.selected.scaleType = scaleType;
+        }
+
+        this.isScaleType = function(scaleType) {
+            return this.selected.scaleType === scaleType;
+        }
         // this.canvas = angular.element('canvas')[0];
         // vexScale(this.canvas);
 

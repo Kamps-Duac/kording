@@ -1,9 +1,14 @@
-<div layout="row" layout-align=" center">
+<div layout="row" layout-align="center center">
     <div layout="column">
         <ng-include src="'views/picker.html'"></ng-include>
-        <div layout="row">
-            <md-whiteframe class="md-whiteframe-12dp" flex layout-margin>
-                <kor-scale></kor-scale>
+        <div layout="row" layout-align="center center">
+            <md-whiteframe class="md-whiteframe-12dp" layout-margin layout-align="center center">
+                <div class="page-container">
+                    <div class="page">
+                        <h1>{{scale.selected.tonic}}{{scale.selected.accidental}} {{scale.selected.scaleType}}</h1>
+                    </div>
+                		<kor-scale layout-align="center center"></kor-scale>
+                </div>
             </md-whiteframe>
         </div>
     </div>

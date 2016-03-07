@@ -1,25 +1,11 @@
-<div layout="row">
-    <div flex="80" md-whiteframe class="md-whiteframe-6dp">
-        <div layout="row" flex="66" layout-wrap layout-align="center center">
-            <md-button flex="20" ng-repeat="tonic in scale.tonics" ng-class="{'md-raised' : scale.isTonic(tonic)}" ng-click="scale.setTonic(tonic)">{{tonic}}</md-button>
-        </div>
-    </div>
-    <div flex md-whiteframe class="md-whiteframe-6dp">
-        <div layout="column" layout-align="center center">
-            <md-button flex="20" ng-repeat="accidental in scale.accidentals" ng-class="{'md-raised' : scale.isAccidental(accidental)}" ng-click="scale.setAccidental(accidental.value)">{{accidental.name}}</md-button>
-        </div>
-    </div>
-</div>
-<div layout="row" layout-align="center center">
-    <md-input-container flex style="margin-right: 10px;">
-        <md-select ng-model="scale.selected.scaleType">
-            <md-option ng-repeat="scaleType in scale.scaleTypes" value="{{scaleType}}">{{scaleType}}</md-option>
-        </md-select>
-    </md-input-container>
-</div>
-</md-whiteframe>
-<div layout="row" layout-align="center center">
-    <md-whiteframe>
-        <p>{{scale.selected.tonic}}{{scale.selected.accidental}} {{scale.selected.scaleType}}</p>
-    </md-whiteframe>
+<div layout="row" layout-wrap layout-margin>
+    <md-toolbar layout="row" layout-wrap>
+        <md-button ng-repeat="tonic in scale.tonics" ng-class="{'md-raised' : scale.isTonic(tonic)}" ng-click="scale.setTonic(tonic)">{{tonic}}</md-button>
+    </md-toolbar>
+    <md-toolbar layout="row">
+        <md-button class="md-accent" flex="20" ng-repeat="accidental in scale.accidentals" ng-class="{'md-raised' : scale.isAccidental(accidental)}" ng-click="scale.setAccidental(accidental.value)">{{accidental.name}}</md-button>
+    </md-toolbar>
+    <md-toolbar layout="row" layout-wrap>
+        <md-button ng-repeat="scaleType in scale.scaleTypes" ng-class="{'md-raised' : scale.isScaleType(scaleType)}" ng-click="scale.setScaleType(scaleType)">{{scaleType}}</md-button>
+    </md-toolbar>
 </div>

@@ -9,7 +9,7 @@ Use simple controls to display a musical scale.
  - `grunt serve` to preview the app
  - refer to the `yo angular` [documentation](https://github.com/yeoman/generator-angular) for more info!
 
-# tasks
+# Backlog
 
 Here we will list tasks to be completed. Tasks can be edited and added at will, and claimed by anyone to be achieved.
 When you start working on a task, make a note on the README. To complete the task, submit a pull request with the commits
@@ -27,10 +27,14 @@ Any usability issues, feature requests, or bugs should be handled as issues.
   - [X] Write the logic to handle a root note and mode, chooses the notes, then pases to vexflow.
   - [X] How can we handle major/minor key signatures?
   - [X] Need the canvas size to change based on scale requirements
-- [ ] __Nav Controlller__ to pull out Navagation into Index
+- [X] __Nav Controlller__ to pull out Navagation into Index
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 - [ ] __Music Theory__ - add info about scale types, finding agreeable modes, circle of fifths, etc
+
+# Todo
+ - [ ] How should the scale picker be displayed?
+ - [ ] Need to fix the scales that throw exception in Vexflow - this is an issue with the key signature logic.
 
 ## Example
 

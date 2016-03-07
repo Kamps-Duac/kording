@@ -17,18 +17,18 @@ angular
     'ngSanitize',
     'ngMaterial'
   ])
-  .config(function ($routeProvider, $mdThemingProvider) {
+  .config(function ($routeProvider, $mdThemingProvider, $mdIconProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
+      // .when('/', {
+      //   templateUrl: 'views/main.html',
+      //   controller: 'MainCtrl',
+      //   controllerAs: 'main'
+      // })
+      // .when('/about', {
+      //   templateUrl: 'views/about.html',
+      //   controller: 'AboutCtrl',
+      //   controllerAs: 'about'
+      // })
       .when('/scale', {
         templateUrl: 'views/scale.html',
         controller: 'ScaleCtrl',
@@ -36,10 +36,12 @@ angular
       })
     
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/scale'
       });
 
       $mdThemingProvider.theme('default')
         .primaryPalette('deep-purple')
         .accentPalette('deep-orange');
+
+      $mdIconProvider.defaultIconSet('img/icons/sets/core-icons.svg', 24);
   });

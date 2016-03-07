@@ -15,11 +15,5 @@ angular.module('kordingApp')
             'Karma'
         ];
 
-        $scope.openLeftMenu = function() {
-        	$mdSidenav('left').toggle();
-        };
 
-        $scope.closeLeftMenu = function() {
-            $mdSidenav('left').toggle();
-        };
     });
