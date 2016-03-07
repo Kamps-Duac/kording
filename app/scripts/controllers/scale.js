@@ -32,27 +32,27 @@ angular.module('kordingApp')
 
         this.setTonic = function(tonic) {
             this.selected.tonic = tonic;
-        }
+        };
 
         this.isTonic = function(tonic) {
             return this.selected.tonic === tonic;
-        }
+        };
 
         this.setAccidental = function(accidental) {
             this.selected.accidental = accidental;
-        }
+        };
 
         this.isAccidental = function(accidental) {
             return this.selected.accidental === accidental.value;
-        }
+        };
 
         this.setScaleType = function(scaleType) {
             this.selected.scaleType = scaleType;
-        }
+        };
 
         this.isScaleType = function(scaleType) {
             return this.selected.scaleType === scaleType;
-        }
+        };
         // this.canvas = angular.element('canvas')[0];
         // vexScale(this.canvas);
 

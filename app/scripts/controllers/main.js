@@ -8,7 +8,7 @@
  * Controller of the kordingApp
  */
 angular.module('kordingApp')
-    .controller('MainCtrl', function($scope, $mdSidenav) {
+    .controller('MainCtrl', function() {
         this.awesomeThings = [
             'HTML5 Boilerplate',
             'AngularJS',
