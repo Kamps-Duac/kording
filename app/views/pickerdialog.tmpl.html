@@ -1,0 +1,34 @@
+<md-dialog aria-label="Scales" flex="80">
+    <form>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>Scale Picker</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                    <i class="material-icons">close</i>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content>
+            <md-tabs md-dynamic-height md-border-bottom>
+                <md-tab label="Tonic">
+                    <md-content class="md-padding">
+                        <md-toolbar layout="row" layout-wrap layout-align="center center">
+                            <md-button ng-repeat="tonic in scaler.getTonics()" ng-class="{'md-raised' : scaler.getTonic() == tonic}" ng-click="scaler.setTonic(tonic)">{{tonic}}</md-button>
+                        </md-toolbar>
+                        <md-toolbar layout="row" layout-align="center center">
+                            <md-button class="md-accent" flex="20" ng-repeat="accidental in scaler.getAccidentals()" ng-class="{'md-raised' : scaler.getAccidental().value == accidental.value}" ng-click="scaler.setAccidental(accidental)">{{accidental.name}}</md-button>
+                        </md-toolbar>
+                    </md-content>
+                </md-tab>
+                <md-tab label="Mode">
+                    <md-content class="md-padding">
+                        <md-toolbar layout="row" layout-wrap>
+                            <md-button ng-repeat="scaleType in scaler.getScaleTypes()" ng-class="{'md-raised' : scaler.getScaleType() == scaleType}" ng-click="scaler.setScaleType(scaleType)">{{scaleType}}</md-button>
+                        </md-toolbar>
+                    </md-content>
+                </md-tab>
+            </md-tabs>
+        </md-dialog-content>
+    </form>
+</md-dialog>

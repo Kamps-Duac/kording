@@ -8,19 +8,19 @@
  */
 angular.module('kordingApp')
     .directive('korScale', function() {
-        return {
-            restrict: 'E',
+        return {restrict: 'E',
+
             link: function postLink(scope, element) {
                 var canvas = document.createElement('canvas');
                 canvas.height = 100;
                 if (window.innerWidth < 650) { canvas.width = window.innerWidth; } else { canvas.width = 650; }
                 element[0].appendChild(canvas);
-                scope.$watch('scale.selected', function() {
+                scope.$watch('currentScale', function() {
                     scope.scale.genVexScale(
                         canvas, 
-                        scope.scale.selected.tonic, 
-                        scope.scale.selected.accidental, 
-                        scope.scale.selected.scaleType);
+                        scope.currentScale.tonic, 
+                        scope.currentScale.accidental.value, 
+                        scope.currentScale.scaleType);
                 }, true);
             }
         };

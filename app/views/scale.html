@@ -1,13 +1,13 @@
 <div layout="row" layout-align="center center">
     <div layout="column">
-        <ng-include src="'views/picker.html'"></ng-include>
+        <!-- <ng-include src="'views/picker.html'"></ng-include> -->
         <div layout="row" layout-align="center center">
             <md-whiteframe class="md-whiteframe-12dp" layout-margin layout-align="center center">
                 <div class="page-container">
                     <div class="page">
-                        <h1>{{scale.selected.tonic}}{{scale.selected.accidental}} {{scale.selected.scaleType}}</h1>
+                        <h1>{{currentScale.tonic}}{{currentScale.accidental.value}} {{currentScale.scaleType}}</h1>
                     </div>
-                		<kor-scale layout-align="center center"></kor-scale>
+                    <kor-scale layout-align="center center"></kor-scale>
                 </div>
             </md-whiteframe>
         </div>

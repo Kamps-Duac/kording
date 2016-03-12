@@ -1,8 +1,5 @@
-<div ng-controller="SidenavCtrl as nav">
-    <div md-swipe-left="nav.closeLeftMenu()">
-        <md-button class="md-icon-button" ng-click="nav.openLeftMenu()" md-swipe-right="nav.openLeftMenu()">
-            <i class="material-icons">menu</i>
-        </md-button>
+<div>
+    <div md-swipe-left="closeLeftMenu()">
         <md-sidenav md-component-id="left" class="md-sidenav-left">
             <md-toolbar class="md-primary">
                 <span>
@@ -10,7 +7,7 @@
                 </span>
             </md-toolbar>
             <md-content>
-                <md-list ng-click="nav.closeLeftMenu()">
+                <md-list ng-click="closeLeftMenu()">
                     <md-list-item>
                         <md-button ng-href="/#/" class="md-hue-2">Home</md-button>
                     </md-list-item>

@@ -33,8 +33,10 @@ Any usability issues, feature requests, or bugs should be handled as issues.
 - [ ] __Music Theory__ - add info about scale types, finding agreeable modes, circle of fifths, etc
 
 # Todo
- - [ ] How should the scale picker be displayed?
+ - Separate out the Picker into it's own controller, that controlls the scale via service.
+ - [X] How should the scale picker be displayed? - for now as a modal dialog
  - [ ] Need to fix the scales that throw exception in Vexflow - this is an issue with the key signature logic.
+ - [ ] Change the scale renderer from checking page size and rendereing to making a reasonable size scale, converting to image, then applying responsive size to the image.
 
 ## Example
 
