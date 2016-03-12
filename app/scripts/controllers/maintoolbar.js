@@ -19,7 +19,7 @@ angular.module('kordingApp')
             $mdDialog.show({
                 parent: angular.element(document.body),
                 targetEvent: ev,
-                templateUrl: 'views/pickerDialog.tmpl.html',
+                templateUrl: 'views/pickerdialog.html',
                 controller: 'PickerdialogCtrl',
                 clickOutsideToClose: true
             });

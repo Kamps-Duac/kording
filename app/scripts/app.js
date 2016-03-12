@@ -40,8 +40,8 @@ angular
       });
 
       $mdThemingProvider.theme('default')
-        .primaryPalette('deep-purple')
-        .accentPalette('deep-orange');
+        .primaryPalette('cyan')
+        .accentPalette('orange');
 
       $mdIconProvider.defaultIconSet('img/icons/sets/core-icons.svg', 24);
   });
