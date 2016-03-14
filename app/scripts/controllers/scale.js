@@ -24,8 +24,8 @@ angular.module('kordingApp')
                 }
             });
 
-
-            this.genVexScale = function(canvas, tonic, accidental, scaleType) {
+            // TODO: make function that creates scale object
+            this.genVexScale = function(tonic, accidental, scaleType) {
                 var scale = {
                     tonic: tonic,
                     notes: [],
@@ -48,7 +48,7 @@ angular.module('kordingApp')
                 var s = scale.notes[0];
                 var tonicOctave = s.split('/')[0] + '/' + (parseInt(s.substr(-1)) + 1).toString();
                 scale.notes.push(tonicOctave);
-                vexScale(canvas, scale);
+                return vexScale(scale);
             };
         }
     ]);

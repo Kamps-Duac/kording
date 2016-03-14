@@ -26,7 +26,11 @@ angular.module('kordingApp')
         };
 
         // Public API here
-        return function(canvas, scale) {
+        return function(scale) {
+            var canvas = document.createElement('canvas');
+            canvas.height = 100;
+            canvas.width = 700;
+
             var staveWidth = canvas.width-50;
             var renderer = new Vex.Flow.Renderer(canvas,
                 Vex.Flow.Renderer.Backends.CANVAS);
@@ -70,5 +74,7 @@ angular.module('kordingApp')
 
             // Render voice
             voice.draw(ctx, stave);
+
+            return canvas.toDataURL();
         };
     });

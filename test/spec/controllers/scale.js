@@ -24,4 +24,9 @@ describe('Controller: ScaleCtrl', function() {
     xit('should watch the currentScale scope property', function($scope) {
       expect(!!$scope.currentScale).toBe(true);
     });
+
+    it('should have method genVexScale that returns Data URL of rendered Vex Flow Scale', function() {
+        var vexUrl = ScaleCtrl.genVexScale('C', '', 'major');
+        expect(vexUrl).toStartWith('data:image/png');
+    });
 });

@@ -29,6 +29,7 @@ Any usability issues, feature requests, or bugs should be handled as issues.
   - [X] Need the canvas size to change based on scale requirements
 - [X] __Nav Controlller__ to pull out Navagation into Index
 - [ ] __Create UI Controller__ - create a basic button toolbar to switch between the scale images
+	- [ ] after clicking on each catagory, the dialog should close. after tonic and sig selected, peel to Mode selector
 - [ ] __turn scale images into HTTP Service__ - Load the scales over HTTP so we can share with the world
 - [ ] __Music Theory__ - add info about scale types, finding agreeable modes, circle of fifths, etc
 
