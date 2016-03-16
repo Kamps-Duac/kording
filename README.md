@@ -37,6 +37,7 @@ Any usability issues, feature requests, or bugs should be handled as issues.
  - Separate out the Picker into it's own controller, that controlls the scale via service.
  - [X] How should the scale picker be displayed? - for now as a modal dialog
  - [ ] Need to fix the scales that throw exception in Vexflow - this is an issue with the key signature logic.
+ 	- [ ] This is caused by 'x' in teoria instead of '##' like in VexFlow. Should show accidentals on each note instead of as key signature. Or could only show key signature next to notes with double accidental.
  - [ ] Change the scale renderer from checking page size and rendereing to making a reasonable size scale, converting to image, then applying responsive size to the image.
 
 ## Example
