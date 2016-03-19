@@ -5,24 +5,39 @@
  * @name kordingApp.vexScale
  * @description
  * # vexScale
- * Factory in the kordingApp.
+ * Factory in the kordingApp that returns a Canvas Data URL after VexFlow draws
+ * the requested scale onto the canvas. 
  */
 angular.module('kordingApp')
     .factory('vexScale', function() {
         // Service logic
         var DURATION = 'q';
 
+        // var findRelativeKeySig = function(accSpec) {
+        //     var keySpecTable = Vex.Flow.keySignature.keySpecs;
+        //     for (var k in keySpecTable) {
+        //         var key = keySpecTable[k];
+        //         if (key.acc === accSpec.acc && key.num === accSpec.num) {
+        //             return k;
+        //         }
+        //     }
+        //     throw new Vex.RERR('BadArguments', 'Failed to find a KeySpec with the same number and type of accidentals.');
+        // };
 
-        var findRelativeKeySig = function(accSpec) {
-            var keySpecTable = Vex.Flow.keySignature.keySpecs;
-            for (var k in keySpecTable) {
-                var key = keySpecTable[k];
-                if (key.acc === accSpec.acc && key.num === accSpec.num) {
-                    return k;
+        var createStaveNotesFromScale = function(scale) {
+            var staveNotes = [];
+            for (var i = 0; i < scale.notes.length; i++) {
+                var note = scale.notes[i];
+                note = note.replace(/x/i, '##');
+                var accidental = note.split('/')[0].slice(1);
+                // TODO: Make the octave suffix smarter
+                var staveNote = new Vex.Flow.StaveNote({ keys: [note], duration: DURATION });
+                if (accidental) {
+                    staveNote.addAccidental(0, new Vex.Flow.Accidental(accidental));
                 }
+                staveNotes.push(staveNote);
             }
-
-            throw new Vex.RERR('BadArguments', 'Failed to find a KeySpec with the same number and type of accidentals.');
+            return staveNotes;
         };
 
         // Public API here
@@ -31,7 +46,7 @@ angular.module('kordingApp')
             canvas.height = 100;
             canvas.width = 700;
 
-            var staveWidth = canvas.width-50;
+            var staveWidth = canvas.width - 50;
             var renderer = new Vex.Flow.Renderer(canvas,
                 Vex.Flow.Renderer.Backends.CANVAS);
 
@@ -41,17 +56,13 @@ angular.module('kordingApp')
             var stave = new Vex.Flow.Stave(10, 0, staveWidth);
             stave.setContext(ctx);
             stave.addClef('treble');
-            stave.addKeySignature(findRelativeKeySig(scale.accSpec));
+            //stave.addKeySignature(findRelativeKeySig(scale.accSpec));
             stave.setEndBarType(Vex.Flow.Barline.type.SINGLE);
 
 
             // Create the notes
-            var staveNotes = [];
+            var staveNotes = createStaveNotesFromScale(scale);
 
-            for (var i = 0; i < scale.notes.length; i++) {
-                // TODO: Make the octave suffix smarter
-                staveNotes.push(new Vex.Flow.StaveNote({ keys: [scale.notes[i]], duration: DURATION }));
-            }
 
             // Create a voice in 4/4
             var voice = new Vex.Flow.Voice({

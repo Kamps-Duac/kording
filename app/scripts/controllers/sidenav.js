@@ -9,11 +9,6 @@
  */
 angular.module('kordingApp')
     .controller('SidenavCtrl', function($mdSidenav) {
-        this.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
         this.openLeftMenu = function() {
             $mdSidenav('left').toggle();
         };

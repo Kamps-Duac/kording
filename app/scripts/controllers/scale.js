@@ -39,7 +39,8 @@ angular.module('kordingApp')
                 var teoriaNotes = teoria.scale(tonic + accidental + this.DEFAULT_OCTAVE, scaleType).notes();
                 for (var i = 0; i < teoriaNotes.length; i++) {
                     var tn = teoriaNotes[i];
-                    scale.notes.push(tn.name() + tn.accidental() + '/' + tn.octave());
+                    var acc = ( teoriaNotes[i].accidental() ? teoriaNotes[i].accidental() : '');
+                    scale.notes.push(tn.name() + acc + '/' + tn.octave());
                     if (tn.accidental()) {
                         if (!scale.accSpec.acc) { scale.accSpec.acc = tn.accidental(); }
                         scale.accSpec.num++;

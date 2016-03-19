@@ -9,11 +9,16 @@
  */
 angular.module('kordingApp')
     .controller('MaintoolbarCtrl', function($scope, $mdDialog, $mdSidenav) {
-        this.awesomeThings = [
-            'HTML5 Boilerplate',
-            'AngularJS',
-            'Karma'
-        ];
+        this.navLinks = [{
+            label: 'Home',
+            href: '/#/'
+        }, {
+            label: 'Scale',
+            href: '/#/scale'
+        }, {
+            label: 'kamps-duac.github.io',
+            href: 'http://kamps-duac.github.io'
+        }];
 
         $scope.showTabDialog = function(ev) {
             $mdDialog.show({

@@ -17,7 +17,12 @@ angular.module('kordingApp')
             { 'name': 'sharp', 'value': '#' },
             { 'name': 'flat', 'value': 'b' }
         ];
-        var SCALE_TYPES = teoria.Scale.KNOWN_SCALES;
+        //var SCALE_TYPES = teoria.Scale.KNOWN_SCALES;
+        var SCALE_TYPES = ['aeolian', 'blues', 'chromatic', 'dorian', 'doubleharmonic',
+            'harmonicminor', 'ionian', 'locrian', 'lydian', 'majorpentatonic', 'melodicminor',
+            'minorpentatonic', 'mixolydian', 'phrygian', 'wholetone', 'harmonicchromatic',
+            'minor', 'major', 'flamenco'
+        ];
 
         var selected = {
             'tonic': 'C',

@@ -1,20 +1,18 @@
 <div>
     <div md-swipe-left="closeLeftMenu()">
         <md-sidenav md-component-id="left" class="md-sidenav-left">
-            <md-toolbar class="md-primary">
-                <span>
-                <img src="images/kording-logo.png" class="logo" alt="kording" style="height: 50px; width: auto"> Kording
-                </span>
+            <md-toolbar class="md-primary" layout="row" layout-align="start center">
+                <img src="images/kording-logo.png" class="logo" alt="kording" style="height: 40px; width: auto">
+                <span>Kording</span>
             </md-toolbar>
             <md-content>
                 <md-list ng-click="closeLeftMenu()">
-                    <md-list-item>
-                        <md-button ng-href="/#/" class="md-hue-2">Home</md-button>
-                    </md-list-item>
-                    <md-divider ng-if="!$last"></md-divider>
-                    <md-list-item>
-                        <md-button ng-href="/#/scale" class="md-hue-3">Scale</md-button>
-                    </md-list-item>
+                    <div ng-repeat="navLink in tool.navLinks">
+                        <md-list-item>
+                            <md-button ng-href="{{navLink.href}}" class="md-hue-2">{{navLink.label}}</md-button>
+                        </md-list-item>
+                        <md-divider ng-if="!$last"></md-divider>
+                    </div>
                 </md-list>
             </md-content>
         </md-sidenav>

@@ -1,3 +1,5 @@
+FIX BUG WITH ACCIDENTALS
+
 # kording
 Use simple controls to display a musical scale.
 
